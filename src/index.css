@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'Tajawal', 'IBM Plex Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html[dir='ltr'] body {
+  font-family: 'IBM Plex Sans', 'Tajawal', sans-serif;
+}
+
+::selection {
+  background-color: #b08d57;
+  color: #faf9f6;
+}
+
+/* focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #b08d57;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.font-mono-label {
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.22em;
+}
+
+.blueprint-bg {
+  background-image: linear-gradient(rgba(176, 141, 87, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(176, 141, 87, 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.corner-bracket {
+  position: relative;
+}
+.corner-bracket::before,
+.corner-bracket::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #b08d57;
+  opacity: 0.6;
+}
+.corner-bracket::before {
+  top: -1px;
+  inset-inline-start: -1px;
+  border-top: 2px solid;
+  border-inline-start: 2px solid;
+}
+.corner-bracket::after {
+  bottom: -1px;
+  inset-inline-end: -1px;
+  border-bottom: 2px solid;
+  border-inline-end: 2px solid;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* custom scrollbar, subtle */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #faf9f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8cdb8;
+  border-radius: 8px;
+}
