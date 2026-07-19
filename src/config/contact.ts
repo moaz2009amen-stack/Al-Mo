@@ -5,7 +5,7 @@ export const CONTACT = {
   telegramNumber: '201065631855', // 0106 563 1855 (Egypt, international format, no plus/leading zero)
   email: 'moaz2009amen@gmail.com',
   facebookUrl: 'https://www.facebook.com/profile.php?id=61552026802548',
-  githubUrl: 'https://github.com/moaz2009amen-stack', // TODO: replace with your actual GitHub profile URL
+  githubUrl: 'https://github.com/', // TODO: replace with your actual GitHub profile URL
 }
 
 export function whatsappLink(message?: string) {

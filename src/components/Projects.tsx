@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { ArrowUpRight } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 import { SectionHeader } from './WhyWorkWithMe'
 
@@ -48,6 +49,17 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm text-paper transition-colors hover:bg-brass"
+                  >
+                    {t.projects.labels.viewDemo}
+                    <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                )}
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2">

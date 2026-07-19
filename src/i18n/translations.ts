@@ -8,6 +8,7 @@ export interface ProjectItem {
   tech: string[]
   status: string
   image?: string
+  demoUrl?: string
 }
 
 export interface TranslationShape {
@@ -41,7 +42,7 @@ export interface TranslationShape {
     eyebrow: string
     title: string
     subtitle: string
-    labels: { problem: string; solution: string; approach: string; result: string; stack: string }
+    labels: { problem: string; solution: string; approach: string; result: string; stack: string; viewDemo: string }
     items: ProjectItem[]
   }
   about: {
@@ -173,7 +174,7 @@ export const translations: Record<'ar' | 'en', TranslationShape> = {
       eyebrow: 'أعمال منفذة',
       title: 'مشاريع حقيقية، بمشاكل حقيقية',
       subtitle: 'كل مشروع هنا حل مشكلة فعلية لصاحبه، وليس مجرد تصميم على الورق.',
-      labels: { problem: 'المشكلة', solution: 'الحل', approach: 'طريقة التفكير', result: 'النتيجة', stack: 'التقنيات' },
+      labels: { problem: 'المشكلة', solution: 'الحل', approach: 'طريقة التفكير', result: 'النتيجة', stack: 'التقنيات', viewDemo: 'جرّب المشروع' },
       items: [
         {
           title: 'ATHR — متجر عطور فاخرة',
@@ -187,6 +188,7 @@ export const translations: Record<'ar' | 'en', TranslationShape> = {
           tech: ['JavaScript', 'Supabase', 'Vercel', 'WhatsApp API'],
           status: 'قيد التشغيل الفعلي',
           image: '/projects/athr.webp',
+          demoUrl: 'https://al-mo.vercel.app',
         },
         {
           title: 'Antika Gallery — متجر أزياء حريمي',
@@ -415,7 +417,7 @@ export const translations: Record<'ar' | 'en', TranslationShape> = {
       eyebrow: 'Selected Work',
       title: 'Real projects, real problems',
       subtitle: 'Every project here solved an actual problem for its owner — not just a design on paper.',
-      labels: { problem: 'Problem', solution: 'Solution', approach: 'Approach', result: 'Result', stack: 'Stack' },
+      labels: { problem: 'Problem', solution: 'Solution', approach: 'Approach', result: 'Result', stack: 'Stack', viewDemo: 'Try the project' },
       items: [
         {
           title: 'ATHR — Luxury Perfume Store',
@@ -429,6 +431,7 @@ export const translations: Record<'ar' | 'en', TranslationShape> = {
           tech: ['JavaScript', 'Supabase', 'Vercel', 'WhatsApp API'],
           status: 'Live in production',
           image: '/projects/athr.webp',
+          demoUrl: 'https://al-mo.vercel.app',
         },
         {
           title: 'Antika Gallery — Women\u2019s Fashion Store',
